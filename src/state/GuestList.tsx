@@ -15,10 +15,10 @@ const GuestList:React.FC<Props> = (props) => {
     <div>
         <h3>Guest List</h3>
         <ul>
-          {guests.map(element=><li>{element}</li>)}
+          {guests.map(element=><li key={element}>{element}</li>)}
         </ul>
         <input value={name} onChange={(e)=>setName(e.target.value)}/>
-        <button>Add Guest</button>
+        <button onClick={onClick} >Add Guest</button>
     </div>);
 };
 
